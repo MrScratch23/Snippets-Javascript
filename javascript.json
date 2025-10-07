@@ -161,5 +161,14 @@
             "$0"
         ],
         "description": "Listas dentro de otras listas"
-    }
+    },
+    
+    "DOMContentLoaded Event": {
+        "prefix": "domready",
+        "body": [
+            "document.addEventListener('DOMContentLoaded', ${1:functionName});"
+        ],
+        "description": "Añadir evento cuando el DOM está cargado"
+    },
+    
 }
