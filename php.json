@@ -1,0 +1,94 @@
+{
+  "PHP JSON Simpl": {
+    "prefix": "php",
+    "body": [
+      "<?php",
+      "",
+      "?>"
+    ],
+    "description": "Script PHP con etiquetas <?php ?>"
+  },
+  "Concatenar frases": {
+    "prefix": "concat",
+    "body": [
+      "echo '<tipo> Palabra o frase ' . $variable . '</tipo>';"
+    ]
+  },
+  "Crear variable": {
+    "prefix": "variable",
+    "body": [
+      "$${1:variableName}"
+    ],
+    "description": "Crea una variable con nombre personalizado"
+  },
+  "Encontrar el tipo": {
+    "prefix": "get",
+    "body": [
+      "echo gettype($variable) . \"<br>\";"
+    ],
+    "description": "Imprime el tipo de una variable usando gettype() en PHP"
+  },
+  "Isset": {
+    "prefix": "iss",
+    "body": [
+      "if (isset(\\$${1:variable})) {",
+      "    ${2:// código aquí}",
+      "}"
+    ],
+    "description": "Verifica si una variable está definida con isset()"
+  },
+  "Operador ternario": {
+    "prefix": "ternario",
+    "body": [
+      "echo '<tipo> ' . ($variable ? 'Valor verdadero' : 'Valor falso') . '</tipo>';"
+    ],
+    "description": "Usa operador ternario para imprimir según condición"
+  },
+  "Array Asociativo": {
+  "prefix": "arrayasoc",
+  "body": [
+    "$${1:nombreArray} = array(",
+    "    \"${2:clave1}\" => \"${3:valor1}\",",
+    "    \"${4:clave2}\" => \"${5:valor2}\",",
+    "    // puedes agregar más claves y valores",
+    ");"
+  ],
+  "description": "Crea un array asociativo en PHP"
+},
+
+  "Concatenar frases con dos variables": {
+    "prefix": "concat2",
+    "body": [
+      "echo '<tipo> Palabra o frase ' . \\$variable1 . ' texto intermedio ' . \\$variable2 . '</tipo>';"
+    ],
+    "description": "Concatenar frase con dos variables"
+  },
+  
+  "GET con coalescencia": {
+    "prefix": "get??",
+    "body": [
+      "$${1:variable} = \\$_GET['${2:parametro}'] ?? '${3:valor default}';"
+    ],
+    "description": "Obtener parámetro GET con valor por defecto"
+  },
+  "Print R Pre": {
+    "prefix": "pp",
+    "body": [
+      "echo '<pre>';",
+      "print_r(${1:\\$variable});",
+      "echo '</pre>';"
+    ]
+  }
+  ,
+
+   "Foreach": {
+    "prefix": "foreach",
+    "body": [
+      "foreach (\\$${1:array} as \\$${2:value}) {",
+      "    ${3:// code}",
+      "}"
+    ]
+  }
+}
+
+
